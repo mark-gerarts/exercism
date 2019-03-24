@@ -1,0 +1,4 @@
+.exercism/
+.idea/
+.stack-work/
+*.cache
