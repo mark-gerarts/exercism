@@ -9,4 +9,4 @@
   (when (= (length dna1) (length dna2))
     (loop for c1 across dna1
           for c2 across dna2
-          when (not (equal c1 c2)) summing 1)))
+          counting (char/= c1 c2))))
