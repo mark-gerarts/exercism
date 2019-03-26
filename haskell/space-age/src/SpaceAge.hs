@@ -9,5 +9,15 @@ data Planet = Mercury
             | Uranus
             | Neptune
 
+normalizeToEarthYear :: Float -> Float -> Float
+normalizeToEarthYear ratio = (/ (ratio * 31557600))
+
 ageOn :: Planet -> Float -> Float
-ageOn planet seconds = error "You need to implement this function."
+ageOn Earth = normalizeToEarthYear 1.0
+ageOn Mercury = normalizeToEarthYear 0.2408467
+ageOn Venus = normalizeToEarthYear 0.61519726
+ageOn Mars = normalizeToEarthYear 1.8808158
+ageOn Jupiter = normalizeToEarthYear 11.862615
+ageOn Saturn = normalizeToEarthYear 29.447498
+ageOn Uranus = normalizeToEarthYear 84.016846
+ageOn Neptune = normalizeToEarthYear 164.79132
